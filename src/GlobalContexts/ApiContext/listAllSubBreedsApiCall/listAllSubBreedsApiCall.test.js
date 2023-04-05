@@ -1,8 +1,8 @@
 import apiCall from "../../../Utils/apiCall";
 
 describe("Given apiCall function for get random images", () => {
-  const urlListAllBreeds = "https://dog.ceo/api/breeds/list/all";
-  const wrongUrlListAllBreeds = "https://dog.ceo/api/breeds/image/rando";
+  const urlListAllSubBreeds = (breed) => `https://dog.ceo/api/breed/${breed}/list`;
+  const wrongUrlListAllSubBreeds = (breed) => `https://dog.ceo/api/breed/${breed}/lis`;
   test("It should bring random imagen", async () => {
     // Arrange
     global.fetch = jest.fn(() =>
@@ -11,18 +11,15 @@ describe("Given apiCall function for get random images", () => {
       })
     );
     const mockResponse = {
-      message: {
-        hound: ["afghan", "basset", "blood", "english", "ibizan", "plott", "walker"],
-        husky: [],
-      },
+      message: ["afghan", "basset", "blood", "english", "ibizan", "plott", "walker"],
       status: "success",
     };
     // Act
-    const listAllBreeds = await apiCall({ url: urlListAllBreeds });
+    const listAllSubBreeds = await apiCall({ url: urlListAllSubBreeds("hound") });
 
     // Assert
-    expect(listAllBreeds?.message).toEqual(mockResponse.message);
-    expect(listAllBreeds?.status).toBe("success");
+    expect(listAllSubBreeds?.message).toEqual(mockResponse.message);
+    expect(listAllSubBreeds?.status).toBe("success");
   });
 
   test("It should bring status error when wrong url", async () => {
@@ -34,14 +31,14 @@ describe("Given apiCall function for get random images", () => {
     );
     const mockResponse = {
       status: "error",
-      message: 'No route found for "GET http://dog.ceo/api/breeds/list/al" with code: 0',
+      message: "Breed not found (sub breed does not exist)",
       code: 404,
     };
     // Act
-    const listAllBreeds = await apiCall({ url: wrongUrlListAllBreeds });
+    const listAllSubBreeds = await apiCall({ url: wrongUrlListAllSubBreeds("hound") });
 
     // Assert
-    expect(listAllBreeds).toStrictEqual(mockResponse);
+    expect(listAllSubBreeds).toStrictEqual(mockResponse);
   });
 
   test("It should return 'error' when API failure", async () => {
@@ -49,9 +46,9 @@ describe("Given apiCall function for get random images", () => {
     global.fetch = jest.fn(() => Promise.reject(mockResponse));
     const mockResponse = "error";
     // Act
-    const listAllBreeds = await apiCall({ url: urlListAllBreeds });
+    const listAllSubBreeds = await apiCall({ url: urlListAllSubBreeds("hound") });
 
     // Assert
-    expect(listAllBreeds).toBe(mockResponse);
+    expect(listAllSubBreeds).toBe(mockResponse);
   });
 });
