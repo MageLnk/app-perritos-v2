@@ -1,4 +1,4 @@
-import apiCall from "../../../Utils/apiCall";
+import listAllSubBreedsApiCall from "./listAllSubBreedsApiCall";
 
 describe("Given apiCall function for get random images", () => {
   const urlListAllSubBreeds = (breed) => `https://dog.ceo/api/breed/${breed}/list`;
@@ -15,7 +15,7 @@ describe("Given apiCall function for get random images", () => {
       status: "success",
     };
     // Act
-    const listAllSubBreeds = await apiCall({ url: urlListAllSubBreeds("hound") });
+    const listAllSubBreeds = await listAllSubBreedsApiCall(urlListAllSubBreeds("hound"));
 
     // Assert
     expect(listAllSubBreeds?.message).toEqual(mockResponse.message);
@@ -35,10 +35,31 @@ describe("Given apiCall function for get random images", () => {
       code: 404,
     };
     // Act
-    const listAllSubBreeds = await apiCall({ url: wrongUrlListAllSubBreeds("hound") });
+    const listAllSubBreeds = await listAllSubBreedsApiCall(wrongUrlListAllSubBreeds("hound"));
 
     // Assert
     expect(listAllSubBreeds).toStrictEqual(mockResponse);
+  });
+
+  test("It should bring error when the Subbreed is wrong", async () => {
+    // Arrange
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockResponse),
+      })
+    );
+    const mockResponse = {
+      status: "error",
+      message: "Breed not found (master breed does not exist)",
+      code: 404,
+    };
+    // Act
+    const imagesByBreed = await listAllSubBreedsApiCall(urlListAllSubBreeds("houn"));
+    //console.log(imagesByBreed);
+
+    // Assert
+    expect(imagesByBreed?.message).toEqual(mockResponse.message);
+    expect(imagesByBreed?.status).toBe("error");
   });
 
   test("It should return 'error' when API failure", async () => {
@@ -46,9 +67,20 @@ describe("Given apiCall function for get random images", () => {
     global.fetch = jest.fn(() => Promise.reject(mockResponse));
     const mockResponse = "error";
     // Act
-    const listAllSubBreeds = await apiCall({ url: urlListAllSubBreeds("hound") });
+    const listAllSubBreeds = await listAllSubBreedsApiCall(urlListAllSubBreeds("hound"));
 
     // Assert
     expect(listAllSubBreeds).toBe(mockResponse);
+  });
+
+  test("It should throw an error when url is null", async () => {
+    // Arrange
+    const url = null;
+
+    // Act
+    const output = await listAllSubBreedsApiCall(url);
+
+    // Assert
+    expect(output).toBe("Invalid format");
   });
 });

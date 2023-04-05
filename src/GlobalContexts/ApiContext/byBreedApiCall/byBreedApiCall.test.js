@@ -1,9 +1,9 @@
-import apiCall from "../../../Utils/apiCall";
+import byBreedApiCall from "./byBreedApiCall";
 
-describe("Given apiCall function for get random images", () => {
+describe("Given byBreedApiCall function for get random images", () => {
   const urlByBreed = (breed) => `https://dog.ceo/api/breed/${breed}/images`;
   const wrongUrlByBreed = (breed) => `https://dog.ceo/api/breed/${breed}/image`;
-  test("It should bring hound data image", async () => {
+  test("It should bring hound url images data image", async () => {
     // Arrange
     global.fetch = jest.fn(() =>
       Promise.resolve({
@@ -18,7 +18,7 @@ describe("Given apiCall function for get random images", () => {
       status: "success",
     };
     // Act
-    const imagesByBreed = await apiCall({ url: urlByBreed("hound") });
+    const imagesByBreed = await byBreedApiCall(urlByBreed("hound"));
     //console.log(imagesByBreed);
 
     // Assert
@@ -39,10 +39,31 @@ describe("Given apiCall function for get random images", () => {
       code: 404,
     };
     // Act
-    const imagesByBreed = await apiCall({ url: wrongUrlByBreed("hound") });
+    const imagesByBreed = await byBreedApiCall(wrongUrlByBreed("hound"));
 
     // Assert
     expect(imagesByBreed).toStrictEqual(mockResponse);
+  });
+
+  test("It should bring error when the breed is wrong", async () => {
+    // Arrange
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockResponse),
+      })
+    );
+    const mockResponse = {
+      status: "error",
+      message: "Breed not found (master breed does not exist)",
+      code: 404,
+    };
+    // Act
+    const imagesByBreed = await byBreedApiCall(urlByBreed("houn"));
+    //console.log(imagesByBreed);
+
+    // Assert
+    expect(imagesByBreed?.message).toEqual(mockResponse.message);
+    expect(imagesByBreed?.status).toBe("error");
   });
 
   test("It should return 'error' when API failure", async () => {
@@ -50,9 +71,20 @@ describe("Given apiCall function for get random images", () => {
     global.fetch = jest.fn(() => Promise.reject(mockResponse));
     const mockResponse = "error";
     // Act
-    const imagesByBreed = await apiCall({ url: wrongUrlByBreed("hound") });
+    const imagesByBreed = await byBreedApiCall(wrongUrlByBreed("hound"));
 
     // Assert
     expect(imagesByBreed).toBe(mockResponse);
+  });
+
+  test("It should throw an error when url is null", async () => {
+    // Arrange
+    const url = null;
+
+    // Act
+    const output = await byBreedApiCall(url);
+
+    // Assert
+    expect(output).toBe("Invalid format");
   });
 });

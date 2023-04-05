@@ -1,4 +1,4 @@
-import apiCall from "../../../Utils/apiCall";
+import imageByBreedListApiCall from "./imageByBreedListApiCall";
 
 describe("Given apiCall function for get random images", () => {
   const randomImageOfABreed = (breed) => `https://dog.ceo/api/breed/${breed}/images/random`;
@@ -15,7 +15,7 @@ describe("Given apiCall function for get random images", () => {
       status: "success",
     };
     // Act
-    const listAllSubBreeds = await apiCall({ url: randomImageOfABreed("akita") });
+    const listAllSubBreeds = await imageByBreedListApiCall(randomImageOfABreed("akita"));
 
     // Assert
     expect(listAllSubBreeds?.message).toEqual(mockResponse.message);
@@ -35,7 +35,26 @@ describe("Given apiCall function for get random images", () => {
       code: 404,
     };
     // Act
-    const listAllSubBreeds = await apiCall({ url: wrongRandomImageOfABreed("akita") });
+    const listAllSubBreeds = await imageByBreedListApiCall(wrongRandomImageOfABreed("akita"));
+
+    // Assert
+    expect(listAllSubBreeds).toStrictEqual(mockResponse);
+  });
+
+  test("It should bring status error when breed is wrong", async () => {
+    // Arrange
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockResponse),
+      })
+    );
+    const mockResponse = {
+      status: "error",
+      message: "Breed not found (master breed does not exist)",
+      code: 404,
+    };
+    // Act
+    const listAllSubBreeds = await imageByBreedListApiCall(wrongRandomImageOfABreed("akitaa"));
 
     // Assert
     expect(listAllSubBreeds).toStrictEqual(mockResponse);
@@ -46,9 +65,20 @@ describe("Given apiCall function for get random images", () => {
     global.fetch = jest.fn(() => Promise.reject(mockResponse));
     const mockResponse = "error";
     // Act
-    const listAllSubBreeds = await apiCall({ url: randomImageOfABreed("akita") });
+    const listAllSubBreeds = await imageByBreedListApiCall(randomImageOfABreed("akita"));
 
     // Assert
     expect(listAllSubBreeds).toBe(mockResponse);
+  });
+
+  test("It should throw an error when url is null", async () => {
+    // Arrange
+    const url = null;
+
+    // Act
+    const output = await imageByBreedListApiCall(url);
+
+    // Assert
+    expect(output).toBe("Invalid format");
   });
 });

@@ -1,4 +1,4 @@
-import apiCall from "../../../Utils/apiCall";
+import randomImageApiCall from "./randomImageApiCall";
 
 describe("Given apiCall function for get random images", () => {
   const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
@@ -15,7 +15,7 @@ describe("Given apiCall function for get random images", () => {
       status: "success",
     };
     // Act
-    const getRandomImageApi = await apiCall({ url: urlRandomImage });
+    const getRandomImageApi = await randomImageApiCall(urlRandomImage);
 
     // Assert
     expect(getRandomImageApi?.message).toBe("https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg");
@@ -35,7 +35,7 @@ describe("Given apiCall function for get random images", () => {
       code: 404,
     };
     // Act
-    const getRandomImageApi = await apiCall({ url: wrongUrlRandomImage });
+    const getRandomImageApi = await randomImageApiCall(wrongUrlRandomImage);
 
     // Assert
     expect(getRandomImageApi).toStrictEqual(mockResponse);
@@ -46,9 +46,20 @@ describe("Given apiCall function for get random images", () => {
     global.fetch = jest.fn(() => Promise.reject(mockResponse));
     const mockResponse = "error";
     // Act
-    const getRandomImageApi = await apiCall({ url: urlRandomImage });
+    const getRandomImageApi = await randomImageApiCall(urlRandomImage);
 
     // Assert
     expect(getRandomImageApi).toBe(mockResponse);
+  });
+
+  test("It should throw an error when url is null", async () => {
+    // Arrange
+    const url = null;
+
+    // Act
+    const output = await randomImageApiCall(url);
+
+    // Assert
+    expect(output).toBe("Invalid format");
   });
 });
