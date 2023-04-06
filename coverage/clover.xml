@@ -1,54 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680726930415" clover="3.2.0">
-  <project timestamp="1680726930415" name="All files">
-    <metrics statements="24" coveredstatements="24" conditionals="25" coveredconditionals="25" methods="7" coveredmethods="7" elements="56" coveredelements="56" complexity="0" loc="24" ncloc="24" packages="7" files="7" classes="7"/>
+<coverage generated="1680794441246" clover="3.2.0">
+  <project timestamp="1680794441246" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="25" coveredconditionals="25" methods="9" coveredmethods="9" elements="65" coveredelements="65" complexity="0" loc="31" ncloc="31" packages="8" files="9" classes="9"/>
     <package name="src">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\App.jsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.GlobalContexts.ApiContext.byBreedApiCall">
+    <package name="src.GlobalContexts.ApiBreedContext">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Provider.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\Provider.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\index.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.byBreedApiCall">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="byBreedApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiContext\byBreedApiCall\byBreedApiCall.js">
+      <file name="byBreedApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\byBreedApiCall\byBreedApiCall.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="src.GlobalContexts.ApiContext.imageByBreedListApiCall">
+    <package name="src.GlobalContexts.ApiBreedContext.imageByBreedListApiCall">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="imageByBreedListApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiContext\imageByBreedListApiCall\imageByBreedListApiCall.js">
+      <file name="imageByBreedListApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\imageByBreedListApiCall\imageByBreedListApiCall.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="src.GlobalContexts.ApiContext.listAllBreedsApiCall">
+    <package name="src.GlobalContexts.ApiBreedContext.listAllBreedsApiCall">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="listAllBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiContext\listAllBreedsApiCall\listAllBreedsApiCall.js">
+      <file name="listAllBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\listAllBreedsApiCall\listAllBreedsApiCall.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="4" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="src.GlobalContexts.ApiContext.listAllSubBreedsApiCall">
+    <package name="src.GlobalContexts.ApiBreedContext.listAllSubBreedsApiCall">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="listAllSubBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiContext\listAllSubBreedsApiCall\listAllSubBreedsApiCall.js">
+      <file name="listAllSubBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\listAllSubBreedsApiCall\listAllSubBreedsApiCall.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="src.GlobalContexts.ApiContext.randomImageApiCall">
+    <package name="src.GlobalContexts.ApiBreedContext.randomImageApiCall">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="randomImageApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiContext\randomImageApiCall\randomImageApiCall.js">
+      <file name="randomImageApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\randomImageApiCall\randomImageApiCall.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="4" type="cond" truecount="4" falsecount="0"/>
@@ -60,12 +76,12 @@
       <file name="apiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Utils\apiCall.js">
         <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="1" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="2" count="20" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="18" type="stmt"/>
+        <line num="3" count="20" type="cond" truecount="4" falsecount="0"/>
         <line num="4" count="18" type="stmt"/>
-        <line num="5" count="13" type="stmt"/>
-        <line num="7" count="13" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="6" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
       </file>
     </package>
   </project>

@@ -11,8 +11,9 @@ describe("Given App component", () => {
     render(<App />);
 
     // Act
+    screen.debug();
 
     // Assert
-    expect(screen.getByRole("heading", { level: 1 }).innerHTML).toBe(title);
+    expect(screen.getByRole("heading", { level: 1 }).innerHTML).toContain(title);
   });
 });

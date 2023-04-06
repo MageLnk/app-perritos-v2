@@ -1,14 +1,13 @@
-const apiCall = async ({ url, method = "get", body, headers }) => {
-  // Podría poner el const para destructurar acá, pero, worth it?
+const apiCall = async ({ url, method = "get", body, headers } = "") => {
   if (!url || typeof url !== "string") return "Invalid format";
   try {
     const response = await fetch(url, { method, body, headers });
     const data = await response.json();
+    if (!data) throw new Error("Error al contactar la API");
 
     return data;
   } catch (error) {
-    //console.log("FDSAFASFADSF", error);
-    return error;
+    throw new Error(error);
   }
 };
 

@@ -62,15 +62,18 @@ describe("Given apiCall function for get random images", () => {
     expect(imagesByBreed?.status).toBe("error");
   });
 
-  test("It should return 'error' when API failure", async () => {
+  test("It should return 'Error al contactar la API' when API failure", async () => {
     // Arrange
-    global.fetch = jest.fn(() => Promise.reject(mockResponse));
-    const mockResponse = "error";
-    // Act
-    const listAllSubBreeds = await listAllSubBreedsApiCall(urlListAllSubBreeds("hound"));
+    global.fetch = jest.fn(() => Promise.reject("Error al contactar la API"));
+    const mockResponse = {
+      message: "Error al contactar la API",
+    };
 
-    // Assert
-    expect(listAllSubBreeds).toBe(mockResponse);
+    // Act
+    return await listAllSubBreedsApiCall(urlListAllSubBreeds("hound")).catch((error) => {
+      // Assert
+      expect(error.message).toBe(mockResponse.message);
+    });
   });
 
   test("It should throw an error when url is null", async () => {

@@ -5,10 +5,10 @@ import ApiBreedContext from ".";
 // import apiCall from "../../utilities/api/apiCall";
 
 const ApiBreedContextProvider = ({ children }) => {
-  const [test, setTest] = useState(false);
+  const [test, setTest] = useState("false");
 
   useEffect(() => {
-    setTest(true);
+    setTest("true");
   }, []);
 
   return (

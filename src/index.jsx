@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // Component
-import App from "./App";
+import AppProvider from "./GlobalContexts";
 // Style
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <AppProvider />
   </React.StrictMode>
 );

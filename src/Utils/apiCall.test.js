@@ -23,9 +23,8 @@ describe("Given apiCall Function", () => {
     expect(output).toBe("Invalid format");
   });
 
-  test("It should throw an 'Invalid format' error when TypeError: Cannot destructure property 'url' of '_ref' as it is undefined in a Empty call function.", async () => {
+  test("It should throw 'Invalid format' when apiCall don't have values", async () => {
     // Arrange
-    //const url = 1234;
 
     // Act
     const output = await apiCall();

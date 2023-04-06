@@ -6,10 +6,10 @@ import ApiBreedContextProvider from "./Provider";
 describe("Given App component", () => {
   test("It should exist", () => {
     // Arrange
-    const algo = render(<ApiBreedContextProvider />);
+    const test = render(<ApiBreedContextProvider />);
 
     // Act
-    console.log("DSAFADSF", algo.container);
+    console.log("DSAFADSF", test.container);
     screen.debug();
 
     // Assert

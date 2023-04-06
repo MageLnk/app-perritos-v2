@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import ApiBreedContext from "./GlobalContexts/ApiBreedContext";
+
 const App = () => {
-  return <h1>Dog Api V2</h1>;
+  const { test } = useContext(ApiBreedContext);
+  return <h1>Dog Api V2, {test}</h1>;
 };
 
 export default App;

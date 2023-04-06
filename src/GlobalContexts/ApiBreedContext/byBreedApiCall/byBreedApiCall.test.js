@@ -66,15 +66,25 @@ describe("Given byBreedApiCall function for get random images", () => {
     expect(imagesByBreed?.status).toBe("error");
   });
 
-  test("It should return 'error' when API failure", async () => {
+  test("It should return 'Error al contactar la API' when API failure", async () => {
     // Arrange
-    global.fetch = jest.fn(() => Promise.reject(mockResponse));
-    const mockResponse = "error";
-    // Act
-    const imagesByBreed = await byBreedApiCall(wrongUrlByBreed("hound"));
+    global.fetch = jest.fn(() => Promise.reject("Error al contactar la API"));
+    const mockResponse = {
+      message: "Error al contactar la API",
+    };
 
-    // Assert
-    expect(imagesByBreed).toBe(mockResponse);
+    // Act
+    return await byBreedApiCall(urlByBreed("hound")).catch((error) => {
+      // Assert
+      expect(error.message).toBe(mockResponse.message);
+    });
+    //    // Act
+    //    try {
+    //      await byBreedApiCall(urlByBreed("hound"));
+    //    } catch (error) {
+    //      // Assert
+    //      expect(error.message).toBe(mockResponse.message);
+    //    }
   });
 
   test("It should throw an error when url is null", async () => {
