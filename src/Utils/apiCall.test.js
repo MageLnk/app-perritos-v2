@@ -39,7 +39,7 @@ describe("Given apiCall Function", () => {
     expect(output).toBe("Invalid format");
   });
 
-  test("It should return 'Error al contactar la API' when API failure", async () => {
+  test("It should return 'Error al contactar la API' when .catch works", async () => {
     // Arrange
     global.fetch = jest.fn(() => Promise.reject("Error al contactar la API"));
     const mockResponse = {
@@ -50,6 +50,22 @@ describe("Given apiCall Function", () => {
     return await apiCall({ url: "" }).catch((error) => {
       // Assert
       expect(error.message).toBe(mockResponse.message);
+    });
+  });
+
+  test("It should return 'Error al contactar la API' when no data", async () => {
+    // Arrange
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockResponse),
+      })
+    );
+    const mockResponse = null;
+    const errorMsg = "Error al contactar la API";
+    // Act
+    return await apiCall({ url: "www.todofail.com" }).catch((error) => {
+      // Assert
+      expect(error.message).toContain(errorMsg);
     });
   });
 
