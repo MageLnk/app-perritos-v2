@@ -1,13 +1,18 @@
-//import { useContext } from "react";
-//import ApiBreedContext from "./GlobalContexts/ApiBreedContext";
-import { useApiBreedContext } from "./GlobalContexts/ApiBreedContext";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Components
+import HomePageContainer from "./Pages/HomePageContainer";
+// App
 const App = () => {
-  //const { test } = useContext(ApiBreedContext);
-  const { test } = useApiBreedContext();
-
-  console.log(test);
-  return <h1>Dog Api V2, {test}</h1>;
+  return (
+    <div className="app-container">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePageContainer />} />
+          <Route path="*" element={<HomePageContainer />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;

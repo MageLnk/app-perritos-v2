@@ -2,19 +2,26 @@ import { useEffect, useState } from "react";
 // Context
 import ApiBreedContext from ".";
 // Utilities
-// import apiCall from "../../utilities/api/apiCall";
+import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
 
 const ApiBreedContextProvider = ({ children }) => {
-  const [test, setTest] = useState("false");
+  const [image, setImage] = useState({});
+
+  const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
+
+  const getRandomImageApiCall = async (url) => {
+    const image = await randomImageApiCall(url);
+    setImage(image);
+  };
 
   useEffect(() => {
-    setTest("true");
+    getRandomImageApiCall(urlRandomImage);
   }, []);
 
   return (
     <ApiBreedContext.Provider
       value={{
-        test,
+        image,
       }}
     >
       {children}
