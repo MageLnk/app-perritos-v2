@@ -7,7 +7,7 @@ describe("Given AppProvider Component", () => {
     render(<AppProvider />);
 
     // Act
-    screen.debug();
+    //screen.debug();
 
     // Assert
   });
