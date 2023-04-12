@@ -1,15 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 // Components
-import HomePageContainer from "./Pages/HomePageContainer";
+import MyRoutes from "./Routes";
 // App
 const App = () => {
   return (
     <div className="app-container">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePageContainer />} />
-          <Route path="*" element={<HomePageContainer />} />
-        </Routes>
+        <MyRoutes />
       </BrowserRouter>
     </div>
   );

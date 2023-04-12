@@ -14,9 +14,7 @@ describe("Given App component", () => {
     // Arrange
     render(
       <MemoryRouter initialEntries={["/"]}>
-        <Routes>
-          <Route path="/" element={<HomePageContainer />} />
-        </Routes>
+        <App />
       </MemoryRouter>
     );
     // Act
