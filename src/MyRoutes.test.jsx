@@ -1,19 +1,17 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 // Component
-// import HomePageContainer from "./Pages/HomePageContainer";
-import MyRoutes from "./Routes";
-
-//jest.mock("./GlobalContexts/ApiBreedContext");
+import MyRoutes from "./MyRoutes";
 
 describe("Given App component", () => {
   afterEach(() => {});
 
-  const labelTextName = "home-content-container";
-  test("Landing on a bad page", () => {
+  test("It should render home page", () => {
     // Arrange
+    const labelTextName = "home-page-container";
+
     render(
       <MemoryRouter initialEntries={["/"]}>
         <MyRoutes />
@@ -28,7 +26,7 @@ describe("Given App component", () => {
 
   test("It should  render 404 page on random route", () => {
     // Arrange
-    const labelTextName = "error-404-content-container";
+    const labelTextName = "error-404-page-container";
     render(
       <MemoryRouter initialEntries={["/random"]}>
         <MyRoutes />

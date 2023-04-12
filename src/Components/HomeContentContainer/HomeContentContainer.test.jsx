@@ -7,8 +7,6 @@ import { useApiBreedContext } from "../../GlobalContexts/ApiBreedContext";
 jest.mock("../../GlobalContexts/ApiBreedContext");
 
 describe("Given App component", () => {
-  const title = "Home Content Container";
-
   //const contextMocked = jest.spyOn(React, "useContext");
 
   afterEach(() => {
@@ -17,6 +15,8 @@ describe("Given App component", () => {
   });
   test("It should check h1 it says 'Home Content Container'", () => {
     // Arrange
+    const title = "Home Content Container";
+
     useApiBreedContext.mockReturnValue({
       image: {
         message: "https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg",

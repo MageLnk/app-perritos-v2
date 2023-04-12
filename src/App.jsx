@@ -1,10 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
 // Components
-import MyRoutes from "./Routes";
+import MyRoutes from "./MyRoutes";
 // App
 const App = () => {
   return (
-    <div className="app-container">
+    <div aria-label="app-container" className="app-container">
       <BrowserRouter>
         <MyRoutes />
       </BrowserRouter>

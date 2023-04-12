@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // Context
-import ApiBreedContext from ".";
+import ApiBreedContext from "./";
 // Utilities
 import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
 
