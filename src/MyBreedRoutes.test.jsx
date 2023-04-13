@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 
 import { MemoryRouter } from "react-router-dom";
 // Component
-import MyRoutes from "./MyRoutes";
+import MyRoutes from "./MyBreedRoutes";
 
 describe("Given App component", () => {
   afterEach(() => {});

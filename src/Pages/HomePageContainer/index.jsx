@@ -1,4 +1,4 @@
-import HomeContentContainer from "../../Components/HomeContentContainer";
+import HomeContentContainer from "../../Components/PageContentContainer/HomeContentContainer";
 // App
 const HomePageContainer = () => {
   return (

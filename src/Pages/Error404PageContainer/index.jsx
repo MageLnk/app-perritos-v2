@@ -1,4 +1,4 @@
-import Error404ContentContainer from "../../Components/Error404ContentContainer";
+import Error404ContentContainer from "../../Components/PageContentContainer/Error404ContentContainer";
 // App
 const Error404PageContainer = () => {
   return (

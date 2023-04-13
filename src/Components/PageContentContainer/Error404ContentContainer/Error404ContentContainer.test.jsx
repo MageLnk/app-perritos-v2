@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 // Component
-import Error404ContentContainer from "./";
+import Error404ContentContainer from ".";
 
 describe("Given App component", () => {
   afterEach(() => {});

@@ -1,4 +1,4 @@
-import { useApiBreedContext } from "../../GlobalContexts/ApiBreedContext";
+import { useApiBreedContext } from "../../../GlobalContexts/ApiBreedContext";
 // App
 const HomeContentContainer = () => {
   const { image } = useApiBreedContext();

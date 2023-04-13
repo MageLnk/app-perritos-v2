@@ -3,8 +3,6 @@ import { render, screen } from "@testing-library/react";
 // Component
 import App from "./App";
 
-//jest.mock("./GlobalContexts/ApiBreedContext");
-
 describe("Given App component", () => {
   afterEach(() => {});
 
