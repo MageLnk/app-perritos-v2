@@ -7,14 +7,14 @@ describe("Given App component", () => {
   afterEach(() => {});
   test("It should render without a problem", () => {
     // Arrange
-    const labelTextName = "error-404-page-container";
+    const testId = "error-404-page-container";
 
     render(<Error404PageContainer />);
 
     // Act
-    const getLabelError404PageText = screen.getByLabelText(labelTextName);
+    const error404TestId = screen.getByTestId(testId);
 
     //Assert
-    expect(getLabelError404PageText).toBeTruthy();
+    expect(error404TestId).toBeTruthy();
   });
 });

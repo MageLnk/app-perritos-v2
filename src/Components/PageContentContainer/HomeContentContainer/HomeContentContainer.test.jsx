@@ -13,6 +13,25 @@ describe("Given App component", () => {
     useApiBreedContext.mockRestore();
     //contextMocked.mockRestore();
   });
+
+  test("It should render without a problem", () => {
+    // Arrange
+    const testId = "home-content-container";
+    useApiBreedContext.mockReturnValue({
+      image: {
+        message: "https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg",
+        status: "success",
+      },
+    });
+
+    // Act
+    render(<HomeContentContainer />);
+    const findTestId = screen.getByTestId(testId);
+
+    // Assert
+    expect(findTestId).toBeTruthy();
+  });
+
   test("It should check h1 it says 'Home Content Container'", () => {
     // Arrange
     const title = "Home Content Container";

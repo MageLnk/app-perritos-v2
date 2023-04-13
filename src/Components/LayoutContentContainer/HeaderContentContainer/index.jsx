@@ -4,7 +4,7 @@ import Logo from "./Logo";
 // App
 const HeaderContentContainer = () => {
   return (
-    <div aria-label="header-content-container" className="header-content-container">
+    <div data-testid="header-content-container" className="header-content-container">
       <div className="logo-header-container">
         <Logo />
       </div>

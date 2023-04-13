@@ -4,13 +4,13 @@ import FooterLayoutContainer from "./";
 describe("Given FooterLayoutContainer Component", () => {
   test("It should render", () => {
     // Arrange
-    const arialLabelText = "footer-layout-container";
+    const testId = "footer-layout-container";
     render(<FooterLayoutContainer />);
 
     // Act
-    const findAriaLabelText = screen.getByLabelText(arialLabelText);
+    const footerTestId = screen.getByTestId(testId);
 
     //
-    expect(findAriaLabelText).toBeTruthy();
+    expect(footerTestId).toBeTruthy();
   });
 });

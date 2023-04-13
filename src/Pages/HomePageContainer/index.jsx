@@ -2,7 +2,7 @@ import HomeContentContainer from "../../Components/PageContentContainer/HomeCont
 // App
 const HomePageContainer = () => {
   return (
-    <div aria-label="home-page-container" className="home-page-container">
+    <div data-testid="home-page-container" className="home-page-container">
       <HomeContentContainer />
     </div>
   );

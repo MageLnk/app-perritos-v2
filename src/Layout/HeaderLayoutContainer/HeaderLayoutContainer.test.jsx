@@ -4,13 +4,13 @@ import HeaderLayoutContainer from "./";
 describe("Given HeaderLayoutContainer Component", () => {
   test("It should render", () => {
     // Arrange
-    const arialLabelText = "header-layout-container";
+    const testId = "header-layout-container";
     render(<HeaderLayoutContainer />);
 
     // Act
-    const findAriaLabelText = screen.getByLabelText(arialLabelText);
+    const headerTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(findAriaLabelText).toBeTruthy();
+    expect(headerTestId).toBeTruthy();
   });
 });

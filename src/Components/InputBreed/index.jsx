@@ -18,15 +18,7 @@ const InputBreed = () => {
     setBreed("");
   };
 
-  return (
-    <Search
-      aria-label="input-breed-container"
-      onSearch={onInputSearch}
-      onChange={onInputChange}
-      value={breed}
-      placeholder="Write a breed"
-    />
-  );
+  return <Search onSearch={onInputSearch} onChange={onInputChange} value={breed} placeholder="Write a breed" />;
 };
 
 export default InputBreed;

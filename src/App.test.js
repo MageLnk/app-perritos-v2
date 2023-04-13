@@ -8,13 +8,13 @@ describe("Given App component", () => {
 
   test("It should render", () => {
     // Arrange
-    const labelTextName = "app-container";
+    const testId = "app-container";
     render(<App />);
 
     // Act
-    const getLabelAppComponentText = screen.findByLabelText(labelTextName);
+    const appTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(getLabelAppComponentText).toBeTruthy();
+    expect(appTestId).toBeTruthy();
   });
 });

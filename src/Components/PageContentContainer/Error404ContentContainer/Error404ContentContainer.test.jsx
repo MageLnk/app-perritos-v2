@@ -5,16 +5,26 @@ import Error404ContentContainer from ".";
 
 describe("Given App component", () => {
   afterEach(() => {});
+
   test("It should render without a problem", () => {
     // Arrange
-    const labelTextName = "error-404-content-container";
+    const testId = "error-404-content-container";
+
+    // Act
+    render(<Error404ContentContainer />);
+    const findError404TextId = screen.getByTestId(testId);
+
+    // Assert
+    expect(findError404TextId).toBeTruthy();
+  });
+
+  test("It should render h1", () => {
+    // Arrange
+    const title = "Error 404 Conent Container";
 
     render(<Error404ContentContainer />);
 
-    // Act
-    const getLabelError404PageText = screen.getByLabelText(labelTextName);
-
-    //Assert
-    expect(getLabelError404PageText).toBeTruthy();
+    // Act & Assert
+    expect(screen.getByRole("heading", { level: 1 }).innerHTML).toContain(title);
   });
 });

@@ -1,5 +1,5 @@
 // Providers
-import ApiBreedContext from "./ApiBreedContext/Provider";
+import ApiBreedContext from "../GlobalContexts/ApiBreedContext/Provider";
 // Main App
 import App from "../App";
 // App

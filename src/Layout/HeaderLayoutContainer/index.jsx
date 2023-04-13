@@ -2,7 +2,7 @@ import HeaderContentContainer from "../../Components/LayoutContentContainer/Head
 // App
 const HeaderLayoutContainer = () => {
   return (
-    <div aria-label="header-layout-container" className="header-layout-container">
+    <div data-testid="header-layout-container" className="header-layout-container">
       <HeaderContentContainer />
     </div>
   );

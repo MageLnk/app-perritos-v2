@@ -4,13 +4,13 @@ import AppProvider from "./";
 describe("Given AppProvider Component", () => {
   test("It should render", async () => {
     // Arrange
-    const labelTextName = "app-container";
+    const testId = "app-container";
     render(<AppProvider />);
 
     // Act
-    const getLabelAppComponentText = screen.findByLabelText(labelTextName);
+    const appTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(getLabelAppComponentText).toBeTruthy();
+    expect(appTestId).toBeTruthy();
   });
 });

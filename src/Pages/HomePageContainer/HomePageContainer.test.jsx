@@ -12,7 +12,7 @@ describe("Given App component", () => {
   });
   test("It should render without a problem", () => {
     // Arrange
-    const labelTextName = "home-page-container";
+    const TestId = "home-page-container";
 
     useApiBreedContext.mockReturnValue({
       image: {
@@ -24,9 +24,9 @@ describe("Given App component", () => {
     render(<HomePageContainer />);
 
     // Act
-    const getLabelHomePageText = screen.getByLabelText(labelTextName);
+    const homePageTestId = screen.getByTestId(TestId);
 
     //Assert
-    expect(getLabelHomePageText).toBeTruthy();
+    expect(homePageTestId).toBeTruthy();
   });
 });

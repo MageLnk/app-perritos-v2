@@ -5,7 +5,7 @@ const HomeContentContainer = () => {
 
   //console.log("Test dentro del HomeContentContainer", image);
   return (
-    <div aria-label="home-content-container" className="home-content-container">
+    <div data-testid="home-content-container" className="home-content-container">
       <h1>Home Content Container</h1>
       <img src={image?.message} alt="dog-images" />
     </div>

@@ -4,14 +4,13 @@ import Logo from "./";
 describe("Given Logo Component", () => {
   test("It should render", () => {
     // Arrange
-    const ariaLabelText = "logo-image";
+    render(<Logo />);
 
     // Act
-    render(<Logo />);
-    const findAriaLabelText = screen.getByLabelText(ariaLabelText);
+    const { alt } = screen.getByRole("img");
 
     // Assert
-    expect(findAriaLabelText).toBeTruthy();
+    expect(alt).toBe("Logo");
   });
 
   test("It should render logo image", () => {
@@ -19,12 +18,11 @@ describe("Given Logo Component", () => {
     render(<Logo />);
 
     // Act
-    const { src, alt } = screen.getByRole("img");
+    const { src } = screen.getByRole("img");
 
     //console.log("SADFASDF", src);
 
     // Assert
-    expect(alt).toBe("Logo");
     expect(src).toBe("http://localhost/images/logo.jpg"); // <--- Raro
   });
 });

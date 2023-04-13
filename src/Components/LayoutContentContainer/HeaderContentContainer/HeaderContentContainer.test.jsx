@@ -4,13 +4,13 @@ import HeaderContentContainer from "./";
 describe("Given HeaderContentContainer Component", () => {
   test("It should render", () => {
     // Arrange
-    const arialLabelText = "header-content-container";
+    const testId = "header-content-container";
     render(<HeaderContentContainer />);
 
     // Act
-    const findAriaLabelText = screen.getByLabelText(arialLabelText);
+    const headerTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(findAriaLabelText).toBeTruthy();
+    expect(headerTestId).toBeTruthy();
   });
 });

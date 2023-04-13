@@ -1,20 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import Layout from ".";
 
-describe("Given FooterLayoutContainer Component", () => {
+describe("Given Header and Footer Components", () => {
   test("It should render with his 2 Components", () => {
     // Arrange
-    const arialLabelHeaderText = "header-layout-container";
-    const arialLabelFooterText = "footer-layout-container";
+    const headerTestId = "header-layout-container";
+    const footerTestId = "footer-layout-container";
 
     render(<Layout />);
 
     // Act
-    const findAriaLabelTextOnHeader = screen.getByLabelText(arialLabelHeaderText);
-    const findAriaLabelTextOnFooter = screen.getByLabelText(arialLabelFooterText);
+    const findHeaderTestId = screen.getByTestId(headerTestId);
+    const findFooterTestId = screen.getByTestId(footerTestId);
 
     //
-    expect(findAriaLabelTextOnHeader).toBeTruthy();
-    expect(findAriaLabelTextOnFooter).toBeTruthy();
+    expect(findHeaderTestId).toBeTruthy();
+    expect(findFooterTestId).toBeTruthy();
   });
 });

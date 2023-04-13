@@ -4,14 +4,14 @@ import FooterContentContainer from "./";
 describe("Given FooterContentContainer Component", () => {
   test("It should render", () => {
     // Arrange
-    const arialLabelText = "footer-content-container";
+    const testId = "footer-content-container";
 
     // Act
     render(<FooterContentContainer />);
-    const findAriaLabelText = screen.getByLabelText(arialLabelText);
+    const footerTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(findAriaLabelText).toBeTruthy();
+    expect(footerTestId).toBeTruthy();
   });
 
   test("It should rende h3 msg", () => {
