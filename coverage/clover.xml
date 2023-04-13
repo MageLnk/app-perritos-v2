@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1681418820840" clover="3.2.0">
+  <project timestamp="1681418820840" name="All files">
+    <metrics statements="71" coveredstatements="71" conditionals="28" coveredconditionals="28" methods="26" coveredmethods="26" elements="125" coveredelements="125" complexity="0" loc="71" ncloc="71" packages="20" files="22" classes="22"/>
+    <package name="src">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="App.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\App.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="MyBreedRoutes.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\MyBreedRoutes.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.InputBreed">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\InputBreed\index.jsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.FooterContentContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\FooterContentContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.HeaderContentContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\HeaderContentContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.HeaderContentContainer.Logo">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\HeaderContentContainer\Logo\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.PageContentContainer.Error404ContentContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\PageContentContainer\Error404ContentContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.PageContentContainer.HomeContentContainer">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\PageContentContainer\HomeContentContainer\index.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="Provider.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\Provider.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+      </file>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.byBreedApiCall">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="byBreedApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\byBreedApiCall\byBreedApiCall.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.imageByBreedListApiCall">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="imageByBreedListApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\imageByBreedListApiCall\imageByBreedListApiCall.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.listAllBreedsApiCall">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="listAllBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\listAllBreedsApiCall\listAllBreedsApiCall.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.listAllSubBreedsApiCall">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="listAllSubBreedsApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\listAllSubBreedsApiCall\listAllSubBreedsApiCall.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.GlobalContexts.ApiBreedContext.randomImageApiCall">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="randomImageApiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\randomImageApiCall\randomImageApiCall.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout.FooterLayoutContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\FooterLayoutContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout.HeaderLayoutContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\HeaderLayoutContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages.Error404PageContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Pages\Error404PageContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages.HomePageContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Pages\HomePageContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Utils">
+      <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="apiCall.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Utils\apiCall.js">
+        <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="25" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="21" type="stmt"/>
+        <line num="4" count="21" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="6" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
