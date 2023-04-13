@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
-import HeaderLayoutContainer from "./";
+import FooterContentContainer from "./";
 
-describe("Given HeaderLayoutContainer Component", () => {
+describe("Given FooterContentContainer Component", () => {
   test("It should render", () => {
     // Arrange
-    const arialLabelText = "header-layout-container";
-    render(<HeaderLayoutContainer />);
+    const arialLabelText = "footer-content-container";
 
     // Act
+    render(<FooterContentContainer />);
     const findAriaLabelText = screen.getByLabelText(arialLabelText);
 
     // Assert

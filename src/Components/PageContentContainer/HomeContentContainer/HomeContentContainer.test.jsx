@@ -2,9 +2,9 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 // Component
 import HomeContentContainer from "./";
-import { useApiBreedContext } from "../../GlobalContexts/ApiBreedContext";
+import { useApiBreedContext } from "../../../GlobalContexts/ApiBreedContext";
 
-jest.mock("../../GlobalContexts/ApiBreedContext");
+jest.mock("../../../GlobalContexts/ApiBreedContext");
 
 describe("Given App component", () => {
   //const contextMocked = jest.spyOn(React, "useContext");

@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681396534532" clover="3.2.0">
-  <project timestamp="1681396534533" name="All files">
-    <metrics statements="49" coveredstatements="49" conditionals="28" coveredconditionals="28" methods="17" coveredmethods="17" elements="94" coveredelements="94" complexity="0" loc="49" ncloc="49" packages="13" files="15" classes="15"/>
+<coverage generated="1681404070126" clover="3.2.0">
+  <project timestamp="1681404070126" name="All files">
+    <metrics statements="59" coveredstatements="59" conditionals="28" coveredconditionals="28" methods="22" coveredmethods="22" elements="109" coveredelements="109" complexity="0" loc="59" ncloc="59" packages="18" files="20" classes="20"/>
     <package name="src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="App.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\App.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
-      <file name="MyRoutes.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\MyRoutes.jsx">
+      <file name="MyBreedRoutes.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\MyBreedRoutes.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="3" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.FooterContentContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\FooterContentContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.HeaderContentContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\HeaderContentContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.Components.PageContentContainer.Error404ContentContainer">
@@ -27,9 +43,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\PageContentContainer\HomeContentContainer\index.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.GlobalContexts">
@@ -56,8 +72,8 @@
       </file>
       <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\GlobalContexts\ApiBreedContext\index.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.GlobalContexts.ApiBreedContext.byBreedApiCall">
@@ -103,6 +119,30 @@
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="5" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout.FooterLayoutContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\FooterLayoutContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout.HeaderLayoutContainer">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\HeaderLayoutContainer\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.Pages.Error404PageContainer">
