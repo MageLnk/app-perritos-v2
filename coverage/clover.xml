@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681404070126" clover="3.2.0">
-  <project timestamp="1681404070126" name="All files">
-    <metrics statements="59" coveredstatements="59" conditionals="28" coveredconditionals="28" methods="22" coveredmethods="22" elements="109" coveredelements="109" complexity="0" loc="59" ncloc="59" packages="18" files="20" classes="20"/>
+<coverage generated="1681418820840" clover="3.2.0">
+  <project timestamp="1681418820840" name="All files">
+    <metrics statements="71" coveredstatements="71" conditionals="28" coveredconditionals="28" methods="26" coveredmethods="26" elements="125" coveredelements="125" complexity="0" loc="71" ncloc="71" packages="20" files="22" classes="22"/>
     <package name="src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="App.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\App.jsx">
@@ -15,20 +15,44 @@
         <line num="7" count="4" type="stmt"/>
       </file>
     </package>
+    <package name="src.Components.InputBreed">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\InputBreed\index.jsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+      </file>
+    </package>
     <package name="src.Components.LayoutContentContainer.FooterContentContainer">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\FooterContentContainer\index.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="3" count="5" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.Components.LayoutContentContainer.HeaderContentContainer">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\HeaderContentContainer\index.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.LayoutContentContainer.HeaderContentContainer.Logo">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Components\LayoutContentContainer\HeaderContentContainer\Logo\index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.Components.PageContentContainer.Error404ContentContainer">
@@ -125,8 +149,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Layout\index.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.Layout.FooterLayoutContainer">

@@ -2,19 +2,19 @@ import { render, screen } from "@testing-library/react";
 import Layout from ".";
 
 describe("Given FooterLayoutContainer Component", () => {
-  test("It should render", () => {
+  test("It should render with his 2 Components", () => {
     // Arrange
-    const arialLabelFooterText = "footer-layout-container";
     const arialLabelHeaderText = "header-layout-container";
+    const arialLabelFooterText = "footer-layout-container";
 
     render(<Layout />);
 
     // Act
-    const findAriaLabelTextOnFooter = screen.getByLabelText(arialLabelFooterText);
     const findAriaLabelTextOnHeader = screen.getByLabelText(arialLabelHeaderText);
+    const findAriaLabelTextOnFooter = screen.getByLabelText(arialLabelFooterText);
 
     //
-    expect(findAriaLabelTextOnFooter).toBeTruthy();
     expect(findAriaLabelTextOnHeader).toBeTruthy();
+    expect(findAriaLabelTextOnFooter).toBeTruthy();
   });
 });

@@ -1,12 +1,11 @@
-import FooterLayoutContainer from "./FooterLayoutContainer";
 import HeaderLayoutContainer from "./HeaderLayoutContainer";
-
+import FooterLayoutContainer from "./FooterLayoutContainer";
 // App
 const Layout = () => {
   return (
     <>
-      <FooterLayoutContainer />
       <HeaderLayoutContainer />
+      <FooterLayoutContainer />
     </>
   );
 };

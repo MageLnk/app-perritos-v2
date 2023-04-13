@@ -25,7 +25,6 @@ describe("Given App component", () => {
     });
 
     render(<HomeContentContainer />);
-    screen.debug();
 
     // Act & Assert
     expect(screen.getByRole("heading", { level: 1 }).innerHTML).toContain(title);

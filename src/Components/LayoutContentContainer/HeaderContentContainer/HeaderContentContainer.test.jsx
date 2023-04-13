@@ -10,7 +10,7 @@ describe("Given HeaderContentContainer Component", () => {
     // Act
     const findAriaLabelText = screen.getByLabelText(arialLabelText);
 
-    //
+    // Assert
     expect(findAriaLabelText).toBeTruthy();
   });
 });

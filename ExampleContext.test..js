@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react";
 import { render, screen } from "@testing-library/react";
+
 const MyContext = createContext();
+
 function MyProvider(props) {
   const { children, value } = props;
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;
