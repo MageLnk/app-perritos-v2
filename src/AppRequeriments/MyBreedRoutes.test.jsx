@@ -10,7 +10,7 @@ describe("Given App component", () => {
 
   test("It should render home page", () => {
     // Arrange
-    const labelTextName = "home-page-container";
+    const testId = "home-page-container";
 
     render(
       <MemoryRouter initialEntries={["/"]}>
@@ -18,15 +18,18 @@ describe("Given App component", () => {
       </MemoryRouter>
     );
     // Act
-    const getLabelHomeRouteText = screen.getByLabelText(labelTextName);
+    const currentPath = window.location.pathname;
+    screen.debug();
+    const homeRouteTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(getLabelHomeRouteText).toBeTruthy();
+    expect(homeRouteTestId).toBeTruthy();
+    expect(currentPath).toBe("/");
   });
 
   test("It should  render 404 page on random route", () => {
     // Arrange
-    const labelTextName = "error-404-page-container";
+    const testId = "error-404-page-container";
     render(
       <MemoryRouter initialEntries={["/random"]}>
         <MyRoutes />
@@ -34,9 +37,14 @@ describe("Given App component", () => {
     );
 
     // Act
-    const getLabelError404RouteText = screen.getByLabelText(labelTextName);
+    const error404TestId = screen.getByTestId(testId);
+
+    const currentPath = window.location.pathname;
 
     // Assert
-    expect(getLabelError404RouteText).toBeTruthy();
+    console.log("SADFASD", currentPath);
+    // Assert
+    expect(error404TestId).toBeTruthy();
+    expect(currentPath).toBe("/random");
   });
 });
