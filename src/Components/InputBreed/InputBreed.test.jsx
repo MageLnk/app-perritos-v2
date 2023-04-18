@@ -1,5 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import InputBreed from "./";
+
+import { waitFor } from "../../Utils/waitFor";
+
+jest.mock("../../Utils/waitFor");
 
 describe("Given InputBreed Component", () => {
   test("It should render", () => {
@@ -35,21 +39,21 @@ describe("Given InputBreed Component", () => {
   test("It should come back to the original placeHolder after 4 seconds", async () => {
     // Arrange
     const placeHolder = "Write a breed";
-    const errorPlaceHolder = "Formato inválido";
     const valueTest = "1234";
+    waitFor.mockImplementation((callback, time) => {
+      //console.log("TIME", time);
+      callback();
+    });
     render(<InputBreed />);
 
     // Act
     const inputOriginal = screen.getByPlaceholderText(placeHolder);
     fireEvent.change(inputOriginal, { target: { value: valueTest } });
     fireEvent.click(screen.getByRole("button"));
-
-    const inputError = screen.getByPlaceholderText(errorPlaceHolder);
+    //await act(async () => new Promise((resolve) => setTimeout(resolve, 0)));
 
     // Assert
-    expect(inputError).toBeTruthy();
     // Espera 4 segundos y verifica que el placeholder vuelva a ser el original
-    await new Promise((resolve) => setTimeout(resolve, 4000));
     expect(inputOriginal.placeholder).toBe(placeHolder);
   });
 

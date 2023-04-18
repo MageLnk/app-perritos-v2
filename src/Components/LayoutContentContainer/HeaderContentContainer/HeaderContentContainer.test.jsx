@@ -6,7 +6,7 @@ describe("Given HeaderContentContainer Component", () => {
   test("It should render", () => {
     // Arrange
     const testId = "header-content-container";
-    render(<HeaderContentContainer />);
+    render(<HeaderContentContainer />, { wrapper: MemoryRouter });
 
     // Act
     const headerTestId = screen.getByTestId(testId);

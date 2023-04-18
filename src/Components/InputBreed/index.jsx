@@ -5,6 +5,7 @@ const { Search } = Input;
 // Utils
 import cleanInput from "../../Utils/cleanInput";
 import { useApiBreedContext } from "../../GlobalContexts/ApiBreedContext";
+import { waitFor } from "../../Utils/waitFor";
 // App
 const InputBreed = () => {
   const [breed, setBreed] = useState("");
@@ -12,11 +13,14 @@ const InputBreed = () => {
   const { getImageByBreedListApiCall } = useApiBreedContext();
 
   useEffect(() => {
+    let interval = "";
     if (placeHolderReactive !== "Write a breed") {
-      setInterval(() => {
+      const callback = () => {
         setPlaceHolderReactive("Write a breed");
-      }, 3000);
+      };
+      interval = waitFor(callback, 3000);
     }
+    return () => clearInterval(interval);
   }, [placeHolderReactive]);
 
   const onInputChange = (event) => {
