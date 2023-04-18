@@ -71,7 +71,7 @@ describe("Given InputBreed Component", () => {
     expect(input.value).toBe(valueTest);
   });
 
-  test("It should activate onInputSearch function to clean the input", () => {
+  test("It should clean the input", () => {
     // Arrange
     const placeHolder = "Write a breed";
     const valueTest = "test value";
