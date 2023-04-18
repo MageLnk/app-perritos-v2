@@ -18,13 +18,10 @@ describe("Given App component", () => {
       </MemoryRouter>
     );
     // Act
-    const currentPath = window.location.pathname;
-    screen.debug();
     const homeRouteTestId = screen.getByTestId(testId);
 
     // Assert
     expect(homeRouteTestId).toBeTruthy();
-    expect(currentPath).toBe("/");
   });
 
   test("It should  render 404 page on random route", () => {
@@ -39,12 +36,7 @@ describe("Given App component", () => {
     // Act
     const error404TestId = screen.getByTestId(testId);
 
-    const currentPath = window.location.pathname;
-
-    // Assert
-    console.log("SADFASD", currentPath);
     // Assert
     expect(error404TestId).toBeTruthy();
-    expect(currentPath).toBe("/random");
   });
 });

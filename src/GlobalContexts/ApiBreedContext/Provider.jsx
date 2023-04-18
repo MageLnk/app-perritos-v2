@@ -3,15 +3,24 @@ import { useEffect, useState } from "react";
 import ApiBreedContext from "./";
 // Utilities
 import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
+import imageByBreedListApiCall from "./imageByBreedListApiCall/imageByBreedListApiCall";
 
+//
+const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
+const randomImageOfABreed = (breed) => `https://dog.ceo/api/breed/${breed}/images/random`;
+//
 const ApiBreedContextProvider = ({ children }) => {
   const [image, setImage] = useState({});
-
-  const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
+  const [randomBreedImage, setRandomBreedImage] = useState({});
 
   const getRandomImageApiCall = async (url) => {
     const image = await randomImageApiCall(url);
     setImage(image);
+  };
+
+  const getImageByBreedListApiCall = async (breed) => {
+    const image = await imageByBreedListApiCall(randomImageOfABreed(breed));
+    setRandomBreedImage(image);
   };
 
   useEffect(() => {
@@ -22,6 +31,8 @@ const ApiBreedContextProvider = ({ children }) => {
     <ApiBreedContext.Provider
       value={{
         image,
+        getImageByBreedListApiCall,
+        randomBreedImage,
       }}
     >
       {children}
