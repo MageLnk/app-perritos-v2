@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681856761025" clover="3.2.0">
-  <project timestamp="1681856761025" name="All files">
-    <metrics statements="96" coveredstatements="92" conditionals="38" coveredconditionals="38" methods="33" coveredmethods="30" elements="167" coveredelements="160" complexity="0" loc="96" ncloc="96" packages="22" files="24" classes="24"/>
+<coverage generated="1681933871077" clover="3.2.0">
+  <project timestamp="1681933871077" name="All files">
+    <metrics statements="96" coveredstatements="93" conditionals="38" coveredconditionals="38" methods="33" coveredmethods="31" elements="167" coveredelements="162" complexity="0" loc="96" ncloc="96" packages="22" files="24" classes="24"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\App.jsx">
@@ -229,11 +229,11 @@
       </file>
     </package>
     <package name="src.Utils.waitFor">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.js" path="C:\Users\magel\OneDrive\Desktop\Perrtios v2\src\Utils\waitFor\index.js">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
     </package>
   </project>
