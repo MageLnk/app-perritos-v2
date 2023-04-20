@@ -15,3 +15,10 @@ const App = () => {
 };
 
 export default App;
+
+/*
+
+- Hacer los 2 componentes, By breed and sub breed
+- Hacer los div clickeables con las razas o sub-razas precargadas
+
+*/

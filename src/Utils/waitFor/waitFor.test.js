@@ -5,7 +5,7 @@ describe("Given waitFor function", () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
-  test("should execute the callback after the specified time", () => {
+  test("It should execute the callback after the specified time", () => {
     // Arrange
     const callback = jest.fn();
     const time = 1000;
@@ -17,5 +17,15 @@ describe("Given waitFor function", () => {
     // Assert
     expect(callback).toHaveBeenCalledTimes(1);
     clearInterval(intervalId);
+  });
+
+  test("It should throw an error when time is not a number", () => {
+    // Arrange
+    const callback = jest.fn();
+    const time = null;
+    const expectedWord = "Formato inválido";
+
+    // Act and Assert
+    expect(() => waitFor(callback, time)).toThrowError(expectedWord);
   });
 });

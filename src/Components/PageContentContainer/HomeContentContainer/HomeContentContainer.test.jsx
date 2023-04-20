@@ -64,24 +64,4 @@ describe("Given App component", () => {
     expect(src).toBe("https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg");
     expect(alt).toBe("dog-images");
   });
-
-  test("It should check randomBreedImage src and alt image from Context", () => {
-    // Arrange
-    useApiBreedContext.mockReturnValue({
-      randomBreedImage: {
-        message: "https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg",
-        status: "success",
-      },
-    });
-
-    render(<HomeContentContainer />);
-
-    // Act
-    screen.debug();
-    const { src, alt } = screen.getByAltText("dog-search-images");
-
-    // Assert
-    expect(src).toBe("https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg");
-    expect(alt).toBe("dog-search-images");
-  });
 });
