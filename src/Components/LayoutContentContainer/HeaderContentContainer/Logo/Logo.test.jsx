@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { BrowserRouter, MemoryRouter, Router } from "react-router-dom";
+import { MemoryRouter, Router } from "react-router-dom";
 
 import Logo from "./";
 import { createMemoryHistory } from "history";
@@ -34,24 +34,6 @@ describe("Given Logo Component", () => {
     // Assert
     expect(src).toBe("http://localhost/images/logo.jpg"); // <--- Raro
   });
-
-  // test("It should link to home V1", () => {
-  //   // Arrange
-  //   render(
-  //     <BrowserRouter initialEntries={["/random"]}>
-  //       <Logo />
-  //     </BrowserRouter>
-  //   );
-
-  //   console.log("Path before Event", window.location.pathname);
-
-  //   // Act
-  //   const homeLink = screen.getByLabelText("Ir a la pagina principal");
-  //   fireEvent.click(homeLink);
-
-  //   // Assert
-  //   expect(window.location.pathname).toBe("/");
-  // });
 
   test("It should link to home", async () => {
     // Arrange

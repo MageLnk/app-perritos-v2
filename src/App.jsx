@@ -18,7 +18,9 @@ export default App;
 
 /*
 
-- Hacer los 2 componentes, By breed and sub breed
-- Hacer los div clickeables con las razas o sub-razas precargadas
+ROUTE
+
+- Crear una función en el provider para que cargue la lista de las razas y sub-razas.
+- Hacer los div clickeables con las razas o sub-razas precargadas respectivamente cuando entremos a una u otra
 
 */

@@ -22,7 +22,6 @@ const ApiBreedContextProvider = ({ children }) => {
     <ApiBreedContext.Provider
       value={{
         image,
-        getImageByBreedListApiCall,
       }}
     >
       {children}
