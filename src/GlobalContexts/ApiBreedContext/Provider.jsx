@@ -6,14 +6,16 @@ import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
 import getListBreeds from "../../Utils/getListBreeds";
 import filterByBreed from "../../Utils/filterByBreed";
 import filterBySubBreed from "../../Utils/filterBySubBreed";
+import imageByBreedListApiCall from "./imageByBreedListApiCall/imageByBreedListApiCall";
 // Urls
 const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
 
 // Provider
 const ApiBreedContextProvider = ({ children }) => {
   const [image, setImage] = useState({});
-  const [breeds, setBreeds] = useState([]);
-  const [subBreeds, setSubBreeds] = useState([]);
+  const [breedInfo, setBreedInfo] = useState([]);
+  const [breedsList, setBreedsList] = useState([]);
+  const [subBreedsList, setSubBreedsList] = useState([]);
 
   const getRandomImageApiCall = async (url) => {
     const image = await randomImageApiCall(url);
@@ -22,8 +24,23 @@ const ApiBreedContextProvider = ({ children }) => {
 
   const getListAllBreedsApiCall = async () => {
     const listAllBreeds = await getListBreeds();
-    setBreeds(filterByBreed(listAllBreeds));
-    setSubBreeds(filterBySubBreed(listAllBreeds));
+    setBreedsList(filterByBreed(listAllBreeds));
+    setSubBreedsList(filterBySubBreed(listAllBreeds));
+  };
+
+  const getImageFromBreed = async (breedName) => {
+    const randomImageOfABreed = (breed) => `https://dog.ceo/api/breed/${breed}/images/random`;
+
+    const image = await imageByBreedListApiCall(randomImageOfABreed(breedName));
+    if (!image) throw Error("No hay data");
+    const newBreedInfo = [
+      ...breedInfo,
+      {
+        imageUrl: image.message,
+        breedName,
+      },
+    ];
+    setBreedInfo(newBreedInfo);
   };
 
   useEffect(() => {
@@ -31,15 +48,14 @@ const ApiBreedContextProvider = ({ children }) => {
     getListAllBreedsApiCall();
   }, []);
 
-  //console.log("Viendo el breeds", breeds);
-  //console.log("Viendo el sub Breeds", subBreeds);
-
   return (
     <ApiBreedContext.Provider
       value={{
         image,
-        breeds,
-        subBreeds,
+        breedsList,
+        subBreedsList,
+        breedInfo,
+        getImageFromBreed,
       }}
     >
       {children}

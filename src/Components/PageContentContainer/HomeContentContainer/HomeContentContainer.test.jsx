@@ -56,6 +56,7 @@ describe("Given App component", () => {
     });
 
     render(<HomeContentContainer />);
+    screen.debug();
 
     // Act
     const { src, alt } = screen.getByAltText("dog-images");
