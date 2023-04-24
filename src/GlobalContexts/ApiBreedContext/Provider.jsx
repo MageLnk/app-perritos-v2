@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import ApiBreedContext from "./";
 // Utilities
 import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
-import listAllBreedsApiCall from "./listAllBreedsApiCall/listAllBreedsApiCall";
-import transformIntoArray from "../../Utils/transformIntoArray";
+import getListBreeds from "../../Utils/getListBreeds";
+import filterByBreed from "../../Utils/filterByBreed";
+import filterBySubBreed from "../../Utils/filterBySubBreed";
 // Urls
 const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
-const urlListAllBreeds = "https://dog.ceo/api/breeds/list/all";
 
 // Provider
 const ApiBreedContextProvider = ({ children }) => {
@@ -21,15 +21,9 @@ const ApiBreedContextProvider = ({ children }) => {
   };
 
   const getListAllBreedsApiCall = async () => {
-    const { message } = await listAllBreedsApiCall(urlListAllBreeds);
-    const listAllBreeds = transformIntoArray(message);
-
-    console.log("THE LIST PAPU2", listAllBreeds);
-
-    const filterByBreed = listAllBreeds.filter((results) => results.subBreeds.length === 0 && results);
-    const filterBySubBreed = listAllBreeds.filter((results) => results.subBreeds.length !== 0 && results);
-
-    console.log("DSAFADSFADSF", filterBySubBreed);
+    const listAllBreeds = await getListBreeds();
+    setBreeds(filterByBreed(listAllBreeds));
+    setSubBreeds(filterBySubBreed(listAllBreeds));
   };
 
   useEffect(() => {
@@ -37,10 +31,15 @@ const ApiBreedContextProvider = ({ children }) => {
     getListAllBreedsApiCall();
   }, []);
 
+  //console.log("Viendo el breeds", breeds);
+  //console.log("Viendo el sub Breeds", subBreeds);
+
   return (
     <ApiBreedContext.Provider
       value={{
         image,
+        breeds,
+        subBreeds,
       }}
     >
       {children}
