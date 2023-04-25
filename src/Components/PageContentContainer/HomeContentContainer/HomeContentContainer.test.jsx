@@ -7,11 +7,8 @@ import { useApiBreedContext } from "../../../GlobalContexts/ApiBreedContext";
 jest.mock("../../../GlobalContexts/ApiBreedContext");
 
 describe("Given App component", () => {
-  //const contextMocked = jest.spyOn(React, "useContext");
-
   afterEach(() => {
     useApiBreedContext.mockRestore();
-    //contextMocked.mockRestore();
   });
 
   test("It should render without a problem", () => {
@@ -49,7 +46,7 @@ describe("Given App component", () => {
     expect(screen.getByRole("heading", { level: 1 }).innerHTML).toContain(title);
   });
 
-  test("It should check src and alt image from Context", () => {
+  test("It should check image src and alt image from Context", () => {
     // Arrange
     useApiBreedContext.mockReturnValue({
       image: {
@@ -59,9 +56,10 @@ describe("Given App component", () => {
     });
 
     render(<HomeContentContainer />);
+    screen.debug();
 
     // Act
-    const { src, alt } = screen.getByRole("img");
+    const { src, alt } = screen.getByAltText("dog-images");
 
     // Assert
     expect(src).toBe("https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg");

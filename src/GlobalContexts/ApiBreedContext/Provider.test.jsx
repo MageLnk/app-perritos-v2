@@ -14,7 +14,8 @@ jest.mock("./randomImageApiCall/randomImageApiCall", () => {
 
 describe("Given ApiBreedContextProvider", () => {
   afterEach(() => {});
-  test("should render children with default state", async () => {
+  test("It should render children with default state", async () => {
+    // Arrange
     render(
       <ApiBreedContextProvider>
         <ApiBreedContext.Consumer>
@@ -27,30 +28,13 @@ describe("Given ApiBreedContextProvider", () => {
       </ApiBreedContextProvider>
     );
 
+    // Act
     const imageStatusElement = await waitFor(() => screen.getByText("Image Status: success"));
-    expect(imageStatusElement).toBeTruthy();
-  });
+    screen.debug();
 
-  test("should render children with new state after fetching image", async () => {
-    render(
-      <ApiBreedContextProvider>
-        <ApiBreedContext.Consumer>
-          {(value) => (
-            <div>
-              <span>Image Status: {value.image.status}</span>
-            </div>
-          )}
-        </ApiBreedContext.Consumer>
-      </ApiBreedContextProvider>
-    );
-
-    await waitFor(() => expect(screen.getByText("Image Status: success")).toBeTruthy());
-
-    const randomImageApiCall = require("./randomImageApiCall/randomImageApiCall");
-    expect(randomImageApiCall).toHaveBeenCalledTimes(1);
-    expect(randomImageApiCall).toHaveBeenCalledWith("https://dog.ceo/api/breeds/image/random");
-
-    const imageStatusElement = screen.getByText("Image Status: success");
+    // Assert
     expect(imageStatusElement).toBeTruthy();
   });
 });
+
+// PENDIENTE

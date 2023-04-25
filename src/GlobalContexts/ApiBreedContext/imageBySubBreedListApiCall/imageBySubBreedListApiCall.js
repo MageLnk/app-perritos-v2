@@ -1,8 +1,8 @@
 import apiCall from "../../../Utils/apiCall";
 
-const byBreedApiCall = (url) => {
+const imageBySubBreedListApiCall = (url) => {
   if (!url || typeof url !== "string") return "Invalid format";
   return apiCall({ url });
 };
 
-export default byBreedApiCall;
+export default imageBySubBreedListApiCall;

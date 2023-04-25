@@ -8,9 +8,9 @@ import MyRoutes from "./MyBreedRoutes";
 describe("Given App component", () => {
   afterEach(() => {});
 
-  test("It should render home page", () => {
+  test("It should render Home Component", () => {
     // Arrange
-    const labelTextName = "home-page-container";
+    const testId = "home-page-container";
 
     render(
       <MemoryRouter initialEntries={["/"]}>
@@ -18,15 +18,47 @@ describe("Given App component", () => {
       </MemoryRouter>
     );
     // Act
-    const getLabelHomeRouteText = screen.getByLabelText(labelTextName);
+    const homeRouteTestId = screen.getByTestId(testId);
 
     // Assert
-    expect(getLabelHomeRouteText).toBeTruthy();
+    expect(homeRouteTestId).toBeTruthy();
   });
 
-  test("It should  render 404 page on random route", () => {
+  test("It should render ShowDogsByBreedPageContainer Component", () => {
     // Arrange
-    const labelTextName = "error-404-page-container";
+    const testId = "show-dogs-by-breed-page-container";
+
+    render(
+      <MemoryRouter initialEntries={["/search-by-breed"]}>
+        <MyRoutes />
+      </MemoryRouter>
+    );
+    // Act
+    const homeRouteTestId = screen.getByTestId(testId);
+
+    // Assert
+    expect(homeRouteTestId).toBeTruthy();
+  });
+
+  test("It should render ShowDogsByBreedPageContainer Component", () => {
+    // Arrange
+    const testId = "show-dogs-by-sub-breeds-page-container";
+
+    render(
+      <MemoryRouter initialEntries={["/search-by-sub-breed"]}>
+        <MyRoutes />
+      </MemoryRouter>
+    );
+    // Act
+    const homeRouteTestId = screen.getByTestId(testId);
+
+    // Assert
+    expect(homeRouteTestId).toBeTruthy();
+  });
+
+  test("It should render 404 page on random route", () => {
+    // Arrange
+    const testId = "error-404-page-container";
     render(
       <MemoryRouter initialEntries={["/random"]}>
         <MyRoutes />
@@ -34,9 +66,9 @@ describe("Given App component", () => {
     );
 
     // Act
-    const getLabelError404RouteText = screen.getByLabelText(labelTextName);
+    const error404TestId = screen.getByTestId(testId);
 
     // Assert
-    expect(getLabelError404RouteText).toBeTruthy();
+    expect(error404TestId).toBeTruthy();
   });
 });

@@ -1,5 +1,5 @@
-import InputBreed from "../../InputBreed";
 import Logo from "./Logo";
+import Menu from "./Menu";
 
 // App
 const HeaderContentContainer = () => {
@@ -8,11 +8,12 @@ const HeaderContentContainer = () => {
       <div className="logo-header-container">
         <Logo />
       </div>
-      <div className="input-header-container">
-        <InputBreed />
+      <div className="brand-header-container">
+        <h3>Brand page</h3>
       </div>
-      {/* Opciones/Login/Algo */}
-      HeaderContentContainer
+      <div className="menu-header-container">
+        <Menu />
+      </div>
     </div>
   );
 };
