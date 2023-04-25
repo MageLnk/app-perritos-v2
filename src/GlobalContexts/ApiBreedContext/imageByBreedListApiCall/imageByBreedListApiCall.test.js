@@ -1,6 +1,6 @@
 import imageByBreedListApiCall from "./imageByBreedListApiCall";
 
-describe("Given apiCall function for get random images", () => {
+describe("Given imageByBreedListApiCall function for get random images", () => {
   const randomImageOfABreed = (breed) => `https://dog.ceo/api/breed/${breed}/images/random`;
   const wrongRandomImageOfABreed = (breed) => `https://dog.ceo/api/breed/${breed}/images/rando`;
   test("It should bring random imagen", async () => {
@@ -31,7 +31,7 @@ describe("Given apiCall function for get random images", () => {
     );
     const mockResponse = {
       status: "error",
-      message: 'No route found for "GET http://dog.ceo/api/breed/akita/images/rando" with code: 0',
+      message: 'No route found for "GET http://dog.ceo/api/breed/hound/afghan/images/rando" with code: 0',
       code: 404,
     };
     // Act

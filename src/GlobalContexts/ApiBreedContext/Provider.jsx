@@ -7,9 +7,6 @@ import getListBreeds from "../../Utils/getListBreeds";
 import filterByBreed from "../../Utils/filterByBreed";
 import filterBySubBreed from "../../Utils/filterBySubBreed";
 import imageByBreedListApiCall from "./imageByBreedListApiCall/imageByBreedListApiCall";
-// Urls
-const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
-
 // Provider
 const ApiBreedContextProvider = ({ children }) => {
   const [image, setImage] = useState({});
@@ -17,8 +14,9 @@ const ApiBreedContextProvider = ({ children }) => {
   const [breedsList, setBreedsList] = useState([]);
   const [subBreedsList, setSubBreedsList] = useState([]);
 
-  const getRandomImageApiCall = async (url) => {
-    const image = await randomImageApiCall(url);
+  const getRandomImageApiCall = async () => {
+    const urlRandomImage = "https://dog.ceo/api/breeds/image/random";
+    const image = await randomImageApiCall(urlRandomImage);
     setImage(image);
   };
 
@@ -44,7 +42,7 @@ const ApiBreedContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getRandomImageApiCall(urlRandomImage);
+    getRandomImageApiCall();
     getListAllBreedsApiCall();
   }, []);
 
