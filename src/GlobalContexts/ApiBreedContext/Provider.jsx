@@ -7,10 +7,13 @@ import getListBreeds from "../../Utils/getListBreeds";
 import filterByBreed from "../../Utils/filterByBreed";
 import filterBySubBreed from "../../Utils/filterBySubBreed";
 import imageByBreedListApiCall from "./imageByBreedListApiCall/imageByBreedListApiCall";
+import imageBySubBreedListApiCall from "./imageBySubBreedListApiCall/imageBySubBreedListApiCall";
+
 // Provider
 const ApiBreedContextProvider = ({ children }) => {
   const [image, setImage] = useState({});
   const [breedInfo, setBreedInfo] = useState([]);
+  const [subBreedInfo, setSubBreedInfo] = useState([]);
   const [breedsList, setBreedsList] = useState([]);
   const [subBreedsList, setSubBreedsList] = useState([]);
 
@@ -41,6 +44,22 @@ const ApiBreedContextProvider = ({ children }) => {
     setBreedInfo(newBreedInfo);
   };
 
+  const getImageFromSubBreed = async (breedName, subBreedName) => {
+    const randomImageOfASubBreed = (breed, subBreed) => `https://dog.ceo/api/breed/${breed}/${subBreed}/images/random`;
+
+    const image = await imageBySubBreedListApiCall(randomImageOfASubBreed(breedName, subBreedName));
+    if (!image) throw Error("No hay data");
+    const newSubBreedInfo = [
+      ...subBreedInfo,
+      {
+        imageUrl: image.message,
+        breedName,
+        subBreedName,
+      },
+    ];
+    setSubBreedInfo(newSubBreedInfo);
+  };
+
   useEffect(() => {
     getRandomImageApiCall();
     getListAllBreedsApiCall();
@@ -53,7 +72,9 @@ const ApiBreedContextProvider = ({ children }) => {
         breedsList,
         subBreedsList,
         breedInfo,
+        subBreedInfo,
         getImageFromBreed,
+        getImageFromSubBreed,
       }}
     >
       {children}

@@ -7,61 +7,68 @@ import { Checkbox } from "antd";
 const ShowDogsBySubBreedContentContainer = () => {
   const [selectedBreedList, setSelectedBreedList] = useState([]);
 
-  const { subBreedsList } = useApiBreedContext();
-  const deployOptions = (list) =>
+  const { subBreedsList, subBreedInfo, getImageFromSubBreed } = useApiBreedContext();
+
+  const deployBreedOptions = (list) =>
     list.map((breed) => (
       <Checkbox key={breed.result} onClick={(event) => onClickForSelectBreed(breed.result, event, list)}>
         {breed.result}
       </Checkbox>
     ));
 
-  const deploySubBreedOptions = (subBreedList, selectedBreedList) => {
-    const filteredList = subBreedList.filter((breed) => selectedBreedList.includes(breed.result));
-    //console.log(filteredList);
-    const subBreeds = filteredList.map((breed) => breed.subBreeds);
-
-    subBreeds.map((breed) => (
-      <div key={breed}>
-        <p>{selectedBreedList}</p>
-        <button onClick={() => onClickForSelectSubBreed(breed)}>{breed}</button>
+  const deploySubBreedOptions = (subBreedList) =>
+    subBreedList.map((breed) => (
+      <div key={breed.result}>
+        <p>{breed.result}</p>
+        {/* Segundo map interno para los botones. Debo separar */}
+        {breed.subBreeds.map((subBreeds) => (
+          <button key={subBreeds} onClick={() => onClickForSelectSubBreed(breed.result, subBreeds)}>
+            {subBreeds}
+          </button>
+        ))}
       </div>
     ));
-  };
 
-  const onClickForSelectSubBreed = (breedName) => {
-    //console.log(breedName);
-  };
+  const deploySubBreedInfo = (subBreedInformation) =>
+    subBreedInformation.map((info) => (
+      <div key={info.breedName} className="breed-information">
+        <p>
+          {info.breedName} - {info.subBreedName}
+        </p>
+        <img src={info.imageUrl} alt="sub-breed-image-information" />
+      </div>
+    ));
 
   const onClickForSelectBreed = (breedName, event, list) => {
     if (event.target.checked === true) addToDeploySubBreedList(breedName, list);
     if (event.target.checked === false) deleteDeploySubBreedList(breedName, list);
   };
 
+  const onClickForSelectSubBreed = (breedName, subBreedName) => {
+    getImageFromSubBreed(breedName, subBreedName);
+  };
+
   const addToDeploySubBreedList = (breedName, list) => {
     const selectedBreed = list.find((breed) => breed.result === breedName);
+
     if (selectedBreed && !selectedBreedList.includes(selectedBreed)) {
-      setSelectedBreedList((prevSelectedBreedList) => [...prevSelectedBreedList, selectedBreed]);
+      const newBreedList = [...selectedBreedList, selectedBreed];
+      setSelectedBreedList(newBreedList);
     }
   };
 
   const deleteDeploySubBreedList = (breedName) => {
-    if (!selectedBreedList.includes(breedName)) {
-      console.log(`${breedName} no está en la lista`);
-      return;
-    }
-    const newArray = selectedBreedList.filter((breed) => breed !== breedName);
-    setSelectedBreedList(newArray);
+    const newBreedList = selectedBreedList.filter((breed) => breed.result !== breedName);
+    setSelectedBreedList(newBreedList);
   };
 
-  console.log("SADFADFASFADS", selectedBreedList);
   return (
     <div data-testid="show-dogs-by-sub-breed-content-container" className="show-dogs-by-sub-breed-content-container">
       <h3>Elige una raza para ver sus sub-razas</h3>
-      <div className="breed-to-select">{subBreedsList && deployOptions(subBreedsList)}</div>
+      <div className="breed-to-select">{subBreedsList && deployBreedOptions(subBreedsList)}</div>
       <h3>Elije la sub-raza</h3>
-      <div className="sub-breed-to-select">
-        {selectedBreedList && deploySubBreedOptions(subBreedsList, selectedBreedList)}
-      </div>
+      <div className="sub-breed-to-select">{selectedBreedList && deploySubBreedOptions(selectedBreedList)}</div>
+      <div className="sub-breed-to-Show">{subBreedInfo && deploySubBreedInfo(subBreedInfo)}</div>
     </div>
   );
 };
