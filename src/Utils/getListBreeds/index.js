@@ -1,4 +1,4 @@
-import listAllBreedsApiCall from "../../GlobalContexts/ApiBreedContext/listAllBreedsApiCall/listAllBreedsApiCall";
+import listAllBreedsApiCall from "../../services/listAllBreedsApiCall/listAllBreedsApiCall";
 import transformIntoArray from "../transformIntoArray";
 //
 const urlListAllBreeds = "https://dog.ceo/api/breeds/list/all";
