@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 // Context
 import ApiBreedContext from "./";
 // Utilities
-import randomImageApiCall from "./randomImageApiCall/randomImageApiCall";
 import getListBreeds from "../../Utils/getListBreeds";
 import filterByBreed from "../../Utils/filterByBreed";
 import filterBySubBreed from "../../Utils/filterBySubBreed";
-import imageByBreedListApiCall from "./imageByBreedListApiCall/imageByBreedListApiCall";
-import imageBySubBreedListApiCall from "./imageBySubBreedListApiCall/imageBySubBreedListApiCall";
+import randomImageApiCall from "../../services/randomImageApiCall/randomImageApiCall";
+import imageByBreedListApiCall from "../../services/imageByBreedListApiCall/imageByBreedListApiCall";
+import imageBySubBreedListApiCall from "../../services/imageBySubBreedListApiCall/imageBySubBreedListApiCall";
 
 // Provider
 const ApiBreedContextProvider = ({ children }) => {
