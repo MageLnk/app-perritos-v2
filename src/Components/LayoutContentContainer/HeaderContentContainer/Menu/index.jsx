@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+// Style
+import "./style.css";
 // App
 const Menu = () => {
   return (

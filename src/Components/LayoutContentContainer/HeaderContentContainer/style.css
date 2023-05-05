@@ -1,0 +1,27 @@
+.header-content-container {
+  background-color: #5ec0ea;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.header-content-container .logo-header-container {
+  grid-column: 1/1;
+  text-align: left;
+}
+.header-content-container .brand-header-container {
+  display: none;
+  grid-column: 2/6;
+}
+@media (min-width: 768px) {
+  .header-content-container .brand-header-container {
+    display: initial;
+    font-size: 2.2rem;
+  }
+}
+.header-content-container .menu-header-container {
+  grid-column: 6/6;
+}
