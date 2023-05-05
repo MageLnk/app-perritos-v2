@@ -7,10 +7,3 @@ html {
 *:after {
   box-sizing: inherit;
 } /* Parte del snipped para eliminar el box-sizing y tome correctamente los tamaños */
-
-a,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}

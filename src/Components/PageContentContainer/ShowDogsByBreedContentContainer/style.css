@@ -1,0 +1,44 @@
+.breed-list-to-select {
+  padding: 1rem;
+}
+
+.breed-list-to-select .breed-to-select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 768px) {
+  .breed-list-to-select .breed-to-select {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.breed-list-to-select button {
+  margin: 0.25rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .breed-list-to-select button {
+    font-size: 1.8rem;
+  }
+}
+.breed-list-to-select button::first-letter {
+  text-transform: uppercase;
+}
+.breed-list-to-select button:hover {
+  cursor: pointer;
+}
+
+.breed-list-to-select .breed-to-show {
+  padding: 1rem;
+}
+.breed-list-to-select .breed-to-show p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.breed-list-to-select .breed-to-show p::first-letter {
+  text-transform: uppercase;
+}
+.breed-list-to-select .breed-to-show img {
+  border: 0.4rem solid #f18903;
+}

@@ -1,15 +1,26 @@
+/* Reglas generales */
 body {
   padding: 0;
   margin: 0;
 }
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
 
+/* App */
 .app-container {
   display: grid;
-  min-height: 100rem;
   grid-template:
-    "header" 2fr
-    "main-page" 20fr
-    "footer" 3fr;
+    "header"
+    "main-page"
+    "footer";
 }
 .app-container .header-layout-container {
   grid-area: header;
