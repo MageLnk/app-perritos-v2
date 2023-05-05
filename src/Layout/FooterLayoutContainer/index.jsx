@@ -2,9 +2,9 @@ import FooterContentContainer from "../../Components/LayoutContentContainer/Foot
 // App
 const FooterLayoutContainer = () => {
   return (
-    <div data-testid="footer-layout-container" className="footer-layout-container">
+    <footer data-testid="footer-layout-container" className="footer-layout-container">
       <FooterContentContainer />
-    </div>
+    </footer>
   );
 };
 

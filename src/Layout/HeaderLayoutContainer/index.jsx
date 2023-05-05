@@ -2,9 +2,9 @@ import HeaderContentContainer from "../../Components/LayoutContentContainer/Head
 // App
 const HeaderLayoutContainer = () => {
   return (
-    <div data-testid="header-layout-container" className="header-layout-container">
+    <header data-testid="header-layout-container" className="header-layout-container">
       <HeaderContentContainer />
-    </div>
+    </header>
   );
 };
 

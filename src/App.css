@@ -1,0 +1,22 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  display: grid;
+  min-height: 100rem;
+  grid-template:
+    "header" 2fr
+    "main-page" 20fr
+    "footer" 3fr;
+}
+.app-container .header-layout-container {
+  grid-area: header;
+}
+.app-container .footer-layout-container {
+  grid-area: footer;
+}
+.app-container .main-page-container {
+  grid-area: main-page;
+}
