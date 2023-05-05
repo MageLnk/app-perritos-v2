@@ -1,4 +1,6 @@
 import FooterContentContainer from "../../Components/LayoutContentContainer/FooterContentContainer";
+// Style
+import "./style.css";
 // App
 const FooterLayoutContainer = () => {
   return (

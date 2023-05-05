@@ -1,3 +1,5 @@
+// Style
+import "./style.css";
 // App
 const FooterContentContainer = () => {
   return (
