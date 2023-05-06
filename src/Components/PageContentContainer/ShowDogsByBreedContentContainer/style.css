@@ -1,3 +1,9 @@
+.show-dogs-by-breed-content-container h2 {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2.4rem;
+}
+
 .breed-list-to-select {
   padding: 1rem;
 }

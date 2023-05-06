@@ -1,0 +1,69 @@
+.show-dogs-by-sub-breed-content-container {
+  padding: 1rem;
+}
+.show-dogs-by-sub-breed-content-container h2 {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2.4rem;
+}
+
+.show-dogs-by-sub-breed-content-container .breed-to-select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 768px) {
+  .show-dogs-by-sub-breed-content-container .breed-to-select {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.sub-breed-to-select .sub-breed-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .sub-breed-to-select .sub-breed-options {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.sub-breed-to-select .sub-breed-options p {
+  grid-column: 1/4;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+@media (min-width: 768px) {
+  .sub-breed-to-select .sub-breed-options p {
+    grid-column: 1/7;
+    margin: 0;
+  }
+}
+.sub-breed-to-select .sub-breed-options p::first-letter {
+  text-transform: uppercase;
+}
+.sub-breed-to-select .sub-breed-options button {
+  margin: 0.25rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+}
+.sub-breed-to-select .sub-breed-options button:hover {
+  cursor: pointer;
+}
+
+.sub-breed-to-show .breed-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sub-breed-to-show .breed-information p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.sub-breed-to-show .breed-information p::first-letter {
+  text-transform: uppercase;
+}
+.sub-breed-to-show .breed-information img {
+  border: 0.4rem solid #f18903;
+}

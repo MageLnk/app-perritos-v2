@@ -26,6 +26,7 @@ const ShowDogsByBreedContentContainer = () => {
 
   return (
     <div data-testid="show-dogs-by-breed-content-container" className="show-dogs-by-breed-content-container">
+      <h2>Elija una raza de perro</h2>
       <div className="breed-list-to-select">
         <div className="breed-to-select">{breedsList && deployOptions(breedsList)}</div>
         <div className="breed-to-show">{breedInfo && deployBreedInfo(breedInfo)}</div>

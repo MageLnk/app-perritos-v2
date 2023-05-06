@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useApiBreedContext } from "../../../GlobalContexts/ApiBreedContext";
 // Style
 import { Checkbox } from "antd";
+import "./style.css";
 // App
 const ShowDogsBySubBreedContentContainer = () => {
   const [selectedBreedList, setSelectedBreedList] = useState([]);
@@ -18,7 +19,7 @@ const ShowDogsBySubBreedContentContainer = () => {
 
   const deploySubBreedOptions = (subBreedList) =>
     subBreedList.map((breed) => (
-      <div key={breed.result}>
+      <div key={breed.result} className="sub-breed-options">
         <p>{breed.result}</p>
         {/* Segundo map interno para los botones. Debo separar */}
         {breed.subBreeds.map((subBreeds) => (
@@ -33,7 +34,7 @@ const ShowDogsBySubBreedContentContainer = () => {
     subBreedInformation.map((info) => (
       <div key={info.breedName} className="breed-information">
         <p>
-          {info.breedName} - {info.subBreedName}
+          {info.breedName} - <span>{info.subBreedName}</span>
         </p>
         <img src={info.imageUrl} alt="sub-breed-image-information" />
       </div>
@@ -51,7 +52,6 @@ const ShowDogsBySubBreedContentContainer = () => {
   const addToDeploySubBreedList = (breedName, list) => {
     const selectedBreed = list.find((breed) => breed.result === breedName);
 
-    //??
     if (selectedBreed && !selectedBreedList.includes(selectedBreed)) {
       const newBreedList = [...selectedBreedList, selectedBreed];
       setSelectedBreedList(newBreedList);
@@ -65,11 +65,11 @@ const ShowDogsBySubBreedContentContainer = () => {
 
   return (
     <div data-testid="show-dogs-by-sub-breed-content-container" className="show-dogs-by-sub-breed-content-container">
-      <h3>Elige una raza para ver sus sub-razas</h3>
+      <h2>Elige una raza para ver sus sub-razas</h2>
       <div className="breed-to-select">{subBreedsList && deployBreedOptions(subBreedsList)}</div>
-      <h3>Elije la sub-raza</h3>
+      {selectedBreedList.length !== 0 && <h2>Elije la sub-raza</h2>}
       <div className="sub-breed-to-select">{selectedBreedList && deploySubBreedOptions(selectedBreedList)}</div>
-      <div className="sub-breed-to-Show">{subBreedInfo && deploySubBreedInfo(subBreedInfo)}</div>
+      <div className="sub-breed-to-show">{subBreedInfo && deploySubBreedInfo(subBreedInfo)}</div>
     </div>
   );
 };
