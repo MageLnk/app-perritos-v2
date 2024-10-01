@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
-
+// Style
+import "./style.css";
 // App
 const HeaderContentContainer = () => {
   return (

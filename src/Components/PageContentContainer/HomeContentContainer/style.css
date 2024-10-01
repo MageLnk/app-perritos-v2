@@ -1,0 +1,18 @@
+.home-content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  align-items: center;
+}
+.home-content-container h1 {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .home-content-container h1 {
+    padding: 2rem;
+  }
+}
+
+.home-img-container {
+  border: 0.4rem solid #f18903;
+}

@@ -1,0 +1,9 @@
+html {
+  box-sizing: border-box; /* Snipped para eliminar el box-sizing y tome correctamente los tamaños */
+  font-size: 62.5%; /* Snipped para que 1REM = 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} /* Parte del snipped para eliminar el box-sizing y tome correctamente los tamaños */

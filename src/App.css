@@ -1,0 +1,33 @@
+/* Reglas generales */
+body {
+  padding: 0;
+  margin: 0;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* App */
+.app-container {
+  display: grid;
+  grid-template:
+    "header"
+    "main-page"
+    "footer";
+}
+.app-container .header-layout-container {
+  grid-area: header;
+}
+.app-container .footer-layout-container {
+  grid-area: footer;
+}
+.app-container .main-page-container {
+  grid-area: main-page;
+}

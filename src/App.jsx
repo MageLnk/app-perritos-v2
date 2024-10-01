@@ -2,13 +2,17 @@ import { BrowserRouter } from "react-router-dom";
 // Components
 import Layout from "./Layout";
 import MyRoutes from "./AppRequeriments/MyBreedRoutes";
+// Style
+import "./App.css";
 // App
 const App = () => {
   return (
     <div data-testid="app-container" className="app-container">
       <BrowserRouter>
         <Layout />
-        <MyRoutes />
+        <div className="main-page-container">
+          <MyRoutes />
+        </div>
       </BrowserRouter>
     </div>
   );

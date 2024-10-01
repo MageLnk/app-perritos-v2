@@ -1,10 +1,12 @@
 import FooterContentContainer from "../../Components/LayoutContentContainer/FooterContentContainer";
+// Style
+import "./style.css";
 // App
 const FooterLayoutContainer = () => {
   return (
-    <div data-testid="footer-layout-container" className="footer-layout-container">
+    <footer data-testid="footer-layout-container" className="footer-layout-container">
       <FooterContentContainer />
-    </div>
+    </footer>
   );
 };
 

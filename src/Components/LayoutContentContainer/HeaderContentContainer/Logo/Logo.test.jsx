@@ -3,6 +3,7 @@ import { MemoryRouter, Router } from "react-router-dom";
 
 import Logo from "./";
 import { createMemoryHistory } from "history";
+//import logoImage from "../../../../images/logo.jpg";
 
 describe("Given Logo Component", () => {
   test("It should render", () => {
@@ -13,6 +14,7 @@ describe("Given Logo Component", () => {
       </MemoryRouter>
     );
 
+    screen.debug();
     // Act
     const { alt } = screen.getByRole("img");
 
